@@ -6,7 +6,9 @@ public class AddressBookMain {
 		// Displaying Welcome message
 		
 		System.out.println(".....Welcome to Address book....");
-		Contacts contact = new Contacts("Shubham", "Gaya", " Bihar", 823001, 9999992222l);
+		int ph = Integer.parseInt(args[4]);
+		int zip = Integer.parseInt(args[3]);
+		Contacts contact = new Contacts(args[0], args[1], args[2], zip , ph);
 		contact.display();
 		AddressBook addBook = new AddressBook();
 		addBook.addContact(contact);
