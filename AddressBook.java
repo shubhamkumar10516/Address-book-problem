@@ -15,6 +15,11 @@ public class AddressBook {
 		System.out.println("Contact Added:: ");
 		return true;
 	}
-	
+	public void editContact(Contacts contact) {
+		
+		hmap.put(contact.getName(), contact);
+		System.out.println("Contact Edited:: ");
+		//return true;
+	}
 	
 }

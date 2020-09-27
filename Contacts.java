@@ -29,9 +29,22 @@ public class Contacts {
 	public long getPhoneNumber() {
 		return phoneNumber;
 	}
-      
-   public void display() {
-	System.out.println(name+" "+city+" "+state+" "+phoneNumber+" "+zip);
+	public void editContacts(String name, String city, String state, int zip, long phoneNumber) {
+		
+		this.name = name;
+		this.city = city;
+		this.state = state;
+		this.zip = zip;
+		this.phoneNumber = phoneNumber;
+       
+		AddressBook adb = new AddressBook();
+		
+		adb.editContact(new Contacts(name, city, state, zip , phoneNumber));
+	}
+	
+    public void display() {
+	
+    	System.out.println(name+" "+city+" "+state+" "+phoneNumber+" "+zip);
 
 }
 }
