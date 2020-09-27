@@ -38,7 +38,7 @@ public class Contacts {
 		this.phoneNumber = phoneNumber;
        
 		AddressBook adb = new AddressBook();
-		
+	
 		adb.editContact(new Contacts(name, city, state, zip , phoneNumber));
 	}
 	
@@ -46,5 +46,5 @@ public class Contacts {
 	
     	System.out.println(name+" "+city+" "+state+" "+phoneNumber+" "+zip);
 
-}
+    }
 }

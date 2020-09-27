@@ -21,5 +21,22 @@ public class AddressBook {
 		System.out.println("Contact Edited:: ");
 		//return true;
 	}
+    public Contacts editContactUsingName(String name) {
+		
+    	
+		  return hmap.get(name);
+		
+	}
+	
+    public void display() {
+		Iterator hmIterator = hmap.entrySet().iterator();
+        while(hmIterator.hasNext()) {
+        	Map.Entry mapElements = (Map.Entry)hmIterator.next();
+        	String name = (String)mapElements.getKey();
+        	Contacts cnt = (Contacts)mapElements.getValue();
+        			
+        	System.out.println(name +" "+ cnt);
+        }
+	}
 	
 }
